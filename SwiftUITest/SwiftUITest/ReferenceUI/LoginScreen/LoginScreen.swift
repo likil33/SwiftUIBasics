@@ -2,7 +2,7 @@
 import SwiftUI
 
 
-struct ContentView:View {
+struct LoginScreen:View {
     
     @State var email:String  = ""
     @State var password:String  = ""
@@ -29,10 +29,10 @@ struct ContentView:View {
                         .background(.gray)
                     
                     //2
-                    customTextFieldView(inputV: password, title: "Password")
+                    LoginComponentsCustomTextFieldView(inputV: password, title: "Password")
                     
                     //3
-                    // InputFieldView(data: $password, title: "Password")
+                    // LoginComponentsTextField(data: $password, title: "Password")
                     
                     
                 }
@@ -122,5 +122,6 @@ struct ContentView:View {
 
 
 #Preview {
-    ContentView()
+    LoginScreen()
 }
+

@@ -1,14 +1,26 @@
-//
-//  TextFiledUnderLine.swift
-//  SwiftUITest
-//
-//  Created by Koneti Santhosh on 21/02/24.
-//
+
+import SwiftUI
+
+
+    //Model
+class LoginViewModel: ObservableObject {
+    
+    @Published var userName:String = ""
+    @Published var password:String = ""
+    
+    func loginAction() {
+        
+    }
+    
+}
+
+
+
 
 import Foundation
 import SwiftUI
 
-struct InputFieldView:View {
+struct LoginComponentsTextField:View {
     @Binding var data:String
     var title:String?
     
@@ -37,17 +49,17 @@ struct InputFieldView:View {
     }
 }
 
-struct InputFieldView_Previews: PreviewProvider {
+struct LoginComponentsTextField_Previews: PreviewProvider {
     @State static var dataV:String = ""
     static var previews: some View {
-        InputFieldView(data: $dataV, title: "Password")
+        LoginComponentsTextField(data: $dataV, title: "Password")
     }
 }
 
 
 
 
-struct customTextFieldView:View {
+struct LoginComponentsCustomTextFieldView:View {
     @State var inputV:String
     var title:String?
     
@@ -73,6 +85,6 @@ struct customeTextField_preview:PreviewProvider {
     @State static var dataV:String = ""
     
     static var previews: some View {
-        customTextFieldView(inputV: dataV, title: "place")
+        LoginComponentsCustomTextFieldView(inputV: dataV, title: "place")
     }
 }
