@@ -3,30 +3,18 @@
 import SwiftUI
 
 
-extension Notification.Name {
-    static let testNotification = Notification.Name("testnotificaiton")
-}
-
 
 struct ContentView: View {
     
-    @State private var getData:String?
     
     var body: some View {
         
         NavigationStack {
-            VStack(){
+            VStack {
                 
-                Button("PostNotification") {
-                    NotificationCenter.default.post(name: Notification.Name.testNotification, object: "test data passing")
-                }
-                
-                Text(getData ?? "")
-                    .onReceive(NotificationCenter.default.publisher(for: Notification.Name.testNotification), perform: {
-                        getData = $0.object as? String
-                    })
-               
             }
+            .background(Color.gray.opacity(0.1))
+            .padding(.all, 10)
             .toolbar {
                 ToolbarItem(placement: .principal) {
                     VStack (alignment: .leading)  {
@@ -71,4 +59,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
+
 

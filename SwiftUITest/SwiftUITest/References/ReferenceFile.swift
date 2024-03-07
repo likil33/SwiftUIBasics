@@ -25,7 +25,7 @@
  struct ContentView:View {
      
      @State private var friendName:String = ""
-     @State private var friends:[String] = ["santhosh","Kumar"]
+     @State private var friends:[String] = ["sssssss","Kumar"]
      
      
      private func deleteTask(indexSet:IndexSet) {
@@ -534,7 +534,7 @@
 
  struct ContentView: View {
     
-     let students = ["santhosh", "kumar", "koneti", "isha", "madhuri", "santhosh kumar", "MadhuriKoneti", "Gnyanika"]
+     let students = ["ssssssss", "kumar", "koneti", "iiiiiii", "mmmmmmmmm", "ssssss kumar", "mkmkmkmkmk", "gggggggggggg"]
      @State private var selectedStudents:[String] = [String]()
      
      var body: some View {
